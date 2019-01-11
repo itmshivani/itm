@@ -1,0 +1,141 @@
+1). show databases; :- database dekhne k liye kitne h .
+
+2). create database name;:- database create krne k liye.
+
+3). use database; :- datbase use krne k liye ;
+
+4). create table name (name varchar(),place varchar());
+
+5). desc table name;:- show table.
+
+6). insert into table name (name ,place) values('shivani','gwalior');
+
+7). select*from table name.
+
+8). insert into table name (name ,place) values('shivani', 'gwalior'),  ('shivam','gwalior'),('sonali','gwalior');
+
+9). insert into table name (name ,place ,addreses) values  ('shivani','gwalior','thatipur');
+
+10). create table new(id  int NOT NULL AUTO_INCREMENT,stu_name varchar(34),stu_roll int(34),stu_fathername varchar(45),stu_mothername varchar(45),stu_email varchar(34),stu_phone int(34),stu_department varchar(45),stu_address varchar(45),ad_year int(45),stu_pass int(45), PRIMARY KEY(id));
+
+11).  select id,stu_name from new;
++----+----------+
+| id | stu_name |
++----+----------+
+|  1 | shivani  |
+|  2 | shivani  |
+|  3 | shivani  |
++----+----------+
+
+12). select id,ad_year from new;
++----+---------+
+| id | ad_year |
++----+---------+
+|  1 |    7357 |
+|  2 |    7357 |
+|  3 |    7357 |
++----+---------+
+
+
+13). select id,stu_name,ad_year from new;
++----+----------+---------+
+| id | stu_name | ad_year |
++----+----------+---------+
+|  1 | shivani  |    7357 |
+|  2 | shivani  |    7357 |
+|  3 | shivani  |    7357 |
++----+----------+---------+
+
+14). select id,stu_name from new LIMIT 2;
++----+----------+
+| id | stu_name |
++----+----------+
+|  1 | shivani  |
+|  2 | shivani  |
++----+----------+
+
+
+15). select *from new limit 3,6;
++----+----------+----------+----------------+----------------+-----------+-----------+----------------+-------------+---------+----------+
+| id | stu_name | stu_roll | stu_fathername | stu_mothername | stu_email | stu_phone | stu_department | stu_address | ad_year | stu_pass |
++----+----------+----------+----------------+----------------+-----------+-----------+----------------+-------------+---------+----------+
+|  4 | shivani  |  2533654 | dhcbc          | dwjcgejc       | dhejhh    |   7234573 | ebceh          | gedehgce    |    7357 |    26375 |
+|  5 | shivani  |  2533654 | dhcbc          | dwjcgejc       | dhejhh    |   7234573 | ebceh          | gedehgce    |    7357 |    26375 |
+|  6 | shivani  |  2533654 | dhcbc          | dwjcgejc       | dhejhh    |   7234573 | ebceh          | gedehgce    |    7357 |    26375 |
+|  7 | shivani  |  2533654 | dhcbc          | dwjcgejc       | dhejhh    |   7234573 | ebceh          | gedehgce    |    7357 |    26375 |
++----+----------+----------+----------------+----------------+-----------+-----------+----------------+-------------+---------+----------+
+
+
+16). select *from new limit 1,3;
++----+----------+----------+----------------+----------------+-----------+-----------+----------------+-------------+---------+----------+
+| id | stu_name | stu_roll | stu_fathername | stu_mothername | stu_email | stu_phone | stu_department | stu_address | ad_year | stu_pass |
++----+----------+----------+----------------+----------------+-----------+-----------+----------------+-------------+---------+----------+
+|  2 | shivani  |  2533654 | dhcbc          | dwjcgejc       | dhejhh    |   7234573 | ebceh          | gedehgce    |    7357 |    26375 |
+|  3 | shivani  |  2533654 | dhcbc          | dwjcgejc       | dhejhh    |   7234573 | ebceh          | gedehgce    |    7357 |    26375 |
+|  4 | shivani  |  2533654 | dhcbc          | dwjcgejc       | dhejhh    |   7234573 | ebceh          | gedehgce    |    7357 |    26375 |
++----+----------+----------+----------------+----------------+-----------+-----------+----------------+-------------+---------+----------+
+
+
+17). select id,stu_name from new limit 5;
++----+----------+
+| id | stu_name |
++----+----------+
+|  1 | shivani  |
+|  2 | shivani  |
+|  3 | shivani  |
+|  4 | shivani  |
+|  5 | shivani  |
++----+----------+
+
+
+18). select id,stu_name from new limit 1,5;
++----+----------+
+| id | stu_name |
++----+----------+
+|  2 | shivani  |
+|  3 | shivani  |
+|  4 | shivani  |
+|  5 | shivani  |
+|  6 | shivani  |
++----+----------+
+
+
+19). select*from new where id=5;
++----+----------+----------+----------------+----------------+-----------+-----------+----------------+-------------+---------+----------+
+| id | stu_name | stu_roll | stu_fathername | stu_mothername | stu_email | stu_phone | stu_department | stu_address | ad_year | stu_pass |
++----+----------+----------+----------------+----------------+-----------+-----------+----------------+-------------+---------+----------+
+|  5 | shivani  |  2533654 | dhcbc          | dwjcgejc       | dhejhh    |   7234573 | ebceh          | gedehgce    |    7357 |    26375 |
++----+----------+----------+----------------+----------------+-----------+-----------+----------------+-------------+---------+----------+
+*  select*from new where stu_department='ebceh';
++----+----------+----------+----------------+----------------+-----------+-----------+----------------+-------------+---------+----------+
+| id | stu_name | stu_roll | stu_fathername | stu_mothername | stu_email | stu_phone | stu_department | stu_address | ad_year | stu_pass |
++----+----------+----------+----------------+----------------+-----------+-----------+----------------+-------------+---------+----------+
+|  1 | shivani  |  2533654 | dhcbc          | dwjcgejc       | dhejhh    |   7234573 | ebceh          | gedehgce    |    7357 |    26375 |
+|  2 | shivani  |  2533654 | dhcbc          | dwjcgejc       | dhejhh    |   7234573 | ebceh          | gedehgce    |    7357 |    26375 |
+|  3 | shivani  |  2533654 | dhcbc          | dwjcgejc       | dhejhh    |   7234573 | ebceh          | gedehgce    |    7357 |    26375 |
+|  4 | shivani  |  2533654 | dhcbc          | dwjcgejc       | dhejhh    |   7234573 | ebceh          | gedehgce    |    7357 |    26375 |
+|  5 | shivani  |  2533654 | dhcbc          | dwjcgejc       | dhejhh    |   7234573 | ebceh          | gedehgce    |    7357 |    26375 |
+|  6 | shivani  |  2533654 | dhcbc          | dwjcgejc       | dhejhh    |   7234573 | ebceh          | gedehgce    |    7357 |    26375 |
+|  7 | shivani  |  2533654 | dhcbc          | dwjcgejc       | dhejhh    |   7234573 | ebceh          | gedehgce    |    7357 |    26375 |
++----+----------+----------+----------------+----------------+-----------+-----------+----------------+-------------+---------+----------+
+
+
+20). select*from new where id>4;
++----+----------+----------+----------------+----------------+-----------+-----------+----------------+-------------+---------+----------+
+| id | stu_name | stu_roll | stu_fathername | stu_mothername | stu_email | stu_phone | stu_department | stu_address | ad_year | stu_pass |
++----+----------+----------+----------------+----------------+-----------+-----------+----------------+-------------+---------+----------+
+|  5 | shivani  |  2533654 | dhcbc          | dwjcgejc       | dhejhh    |   7234573 | ebceh          | gedehgce    |    7357 |    26375 |
+|  6 | shivani  |  2533654 | dhcbc          | dwjcgejc       | dhejhh    |   7234573 | ebceh          | gedehgce    |    7357 |    26375 |
+|  7 | shivani  |  2533654 | dhcbc          | dwjcgejc       | dhejhh    |   7234573 | ebceh          | gedehgce    |    7357 |    26375 |
++----+----------+----------+----------------+----------------+-----------+-----------+----------------+-------------+---------+----------+
+
+
+21). select*from new where id<4;
++----+----------+----------+----------------+----------------+-----------+-----------+----------------+-------------+---------+----------+
+| id | stu_name | stu_roll | stu_fathername | stu_mothername | stu_email | stu_phone | stu_department | stu_address | ad_year | stu_pass |
++----+----------+----------+----------------+----------------+-----------+-----------+----------------+-------------+---------+----------+
+|  1 | shivani  |  2533654 | dhcbc          | dwjcgejc       | dhejhh    |   7234573 | ebceh          | gedehgce    |    7357 |    26375 |
+|  2 | shivani  |  2533654 | dhcbc          | dwjcgejc       | dhejhh    |   7234573 | ebceh          | gedehgce    |    7357 |    26375 |
+|  3 | shivani  |  2533654 | dhcbc          | dwjcgejc       | dhejhh    |   7234573 | ebceh          | gedehgce    |    7357 |    26375 |
++----+----------+----------+----------------+----------------+-----------+-----------+----------------+-------------+---------+----------+
+
